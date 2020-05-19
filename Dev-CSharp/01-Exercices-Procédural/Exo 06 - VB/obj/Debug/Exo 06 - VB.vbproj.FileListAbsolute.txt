@@ -1,0 +1,11 @@
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\bin\Debug\Exo 06 - VB.exe.config
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\bin\Debug\Exo 06 - VB.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\bin\Debug\Exo 06 - VB.pdb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\bin\Debug\Exo 06 - VB.xml
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.vbprojAssemblyReference.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo_06___VB.Resources.resources
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.vbproj.GenerateResource.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.vbproj.CoreCompileInputs.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.xml
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 06 - VB\obj\Debug\Exo 06 - VB.pdb

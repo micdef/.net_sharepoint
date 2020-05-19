@@ -1,0 +1,7 @@
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\bin\Debug\Exo 08 - CSharp.exe.config
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\bin\Debug\Exo 08 - CSharp.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\bin\Debug\Exo 08 - CSharp.pdb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\obj\Debug\Exo 08 - CSharp.csprojAssemblyReference.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\obj\Debug\Exo 08 - CSharp.csproj.CoreCompileInputs.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\obj\Debug\Exo 08 - CSharp.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 08 - CSharp\obj\Debug\Exo 08 - CSharp.pdb

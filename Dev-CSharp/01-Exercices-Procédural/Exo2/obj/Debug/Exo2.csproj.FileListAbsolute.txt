@@ -1,0 +1,6 @@
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\bin\Debug\Exo2.exe.config
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\bin\Debug\Exo2.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\bin\Debug\Exo2.pdb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\obj\Debug\Exo2.csproj.CoreCompileInputs.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\obj\Debug\Exo2.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo2\obj\Debug\Exo2.pdb

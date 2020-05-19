@@ -1,0 +1,13 @@
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.exe
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.deps.json
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.runtimeconfig.json
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.runtimeconfig.dev.json
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.dll
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\bin\Debug\netcoreapp3.1\Exo 01 - VB.pdb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.vbprojAssemblyReference.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.vbproj.CoreCompileInputs.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.AssemblyInfoInputs.cache
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.AssemblyInfo.vb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.dll
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.pdb
+C:\Users\micde\OneDrive\Personnal\Formations\.net - SharePoint\F20L025 - Cours 04 - Développement C#\Exercices\Exercices\Exo 01 - VB\obj\Debug\netcoreapp3.1\Exo 01 - VB.genruntimeconfig.cache

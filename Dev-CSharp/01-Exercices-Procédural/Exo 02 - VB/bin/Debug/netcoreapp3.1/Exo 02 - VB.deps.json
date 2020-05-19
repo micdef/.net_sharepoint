@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Exo 02 - VB/1.0.0": {
+        "runtime": {
+          "Exo 02 - VB.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exo 02 - VB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
