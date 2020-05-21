@@ -1,7 +1,0 @@
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\bin\Debug\Voyage.exe.config
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\bin\Debug\Voyage.exe
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\bin\Debug\Voyage.pdb
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\obj\Debug\Voyage.csprojAssemblyReference.cache
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\obj\Debug\Voyage.csproj.CoreCompileInputs.cache
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\obj\Debug\Voyage.exe
-D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage\obj\Debug\Voyage.pdb

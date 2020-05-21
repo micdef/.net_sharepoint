@@ -1,0 +1,6 @@
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\obj\Debug\Voyage.Models.csprojAssemblyReference.cache
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\obj\Debug\Voyage.Models.csproj.CoreCompileInputs.cache
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\bin\Debug\Voyage.Models.dll
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\bin\Debug\Voyage.Models.pdb
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\obj\Debug\Voyage.Models.dll
+D:\_Work\Git\TFTIC\.net_sharepoint\Dev-CSharp\02-Exercices-OO\Exercice Guide - Voyage\Voyage.Models\obj\Debug\Voyage.Models.pdb

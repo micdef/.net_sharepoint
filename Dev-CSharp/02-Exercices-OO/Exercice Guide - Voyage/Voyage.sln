@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voyage.App", "Voyage.App\Voyage.App.csproj", "{6B92161A-E6E0-4073-A614-8EC232902DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voyage.Models", "Voyage.Models\Voyage.Models.csproj", "{528D872A-DA1C-4646-96AF-28BA13C0EC55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B92161A-E6E0-4073-A614-8EC232902DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B92161A-E6E0-4073-A614-8EC232902DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B92161A-E6E0-4073-A614-8EC232902DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B92161A-E6E0-4073-A614-8EC232902DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{528D872A-DA1C-4646-96AF-28BA13C0EC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528D872A-DA1C-4646-96AF-28BA13C0EC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528D872A-DA1C-4646-96AF-28BA13C0EC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528D872A-DA1C-4646-96AF-28BA13C0EC55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF0D06B2-D45C-4717-9913-FA6C7DD22CE9}
+	EndGlobalSection
+EndGlobal

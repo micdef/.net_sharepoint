@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{528D872A-DA1C-4646-96AF-28BA13C0EC55}</ProjectGuid>
+    <ProjectGuid>{A5E9A123-7588-48BF-B002-1C1E8B7A430A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Voyage.Models</RootNamespace>
@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CG_Console.cs" />
     <Compile Include="C_Adulte.cs" />
     <Compile Include="C_Enfant.cs" />
     <Compile Include="C_Personne.cs" />
     <Compile Include="C_Voyage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="A_Console.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,22 +1,18 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Security.AccessControl;
+using System.Data.SqlTypes;
+using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Voyage.Models
 {
     public class Adulte : Personne
     {
-
         #region Fields
 
         private readonly List<string> _films;
-        private List<string> _filmsChoisis;
-        private int _nbFilmsRestants;
+        private List<String> _filmsChoisis;
+        private int _nbFilmsRestant;
         private int _nbFilmsMax;
         private List<Enfant> _enfantsACharge;
 
@@ -26,61 +22,26 @@ namespace Voyage.Models
 
         private Adulte()
         {
-            this._films = null;
-            this._filmsChoisis = null;
-            this._nbFilmsMax = 0;
-            this._nbFilmsRestants = 0;
-            this._enfantsACharge = null;
+            _films = null;
+            _filmsChoisis = null;
+            _nbFilmsMax = 4;
+            _nbFilmsRestant = _nbFilmsMax;
         }
 
-        public Adulte(string nom, string prenom, DateTime dateNaissance, string groupe, int nbFilmsMax) : base(nom, prenom, dateNaissance, groupe)
+        public Adulte(string nom, string prenom, DateTime dateNaiss) : base(nom, prenom, dateNaiss)
         {
-            this._films = new List<string>();
-            this._filmsChoisis = new List<string>();
-            this.NbFilmsMax = nbFilmsMax;
-            this.NbFilmsRestants = this.NbFilmsMax;
-            this._enfantsACharge = new List<Enfant>();
-            RemplirListeFilms();
+            _films = new List<String>();
+            _filmsChoisis = new List<string>();
+            _nbFilmsMax = 4;
+            _nbFilmsRestant = _nbFilmsMax;
+            FillFilmList();
         }
 
         #endregion
 
-        #region Getters-Setters
+        #region Methods
 
-        public ReadOnlyCollection<string> Films
-        {
-            get { return _films.AsReadOnly(); }
-        }
-
-        public ReadOnlyCollection<string> FilmsChoisis
-        {
-            get { return _filmsChoisis.AsReadOnly(); }
-            private set {}
-        }
-
-        public int NbFilmsRestants
-        {
-            get { return _nbFilmsRestants; }
-            private set { _nbFilmsRestants = value; }
-        }
-
-        public int NbFilmsMax
-        {
-            get { return _nbFilmsMax; }
-            private set { _nbFilmsMax = value; }
-        }
-
-        public ReadOnlyCollection<Enfant> EnfantsACharge
-        {
-            get { return _enfantsACharge.AsReadOnly(); }
-            private set {}
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private void RemplirListeFilms()
+        private void FillFilmList()
         {
             _films.Add("Star Wars I : La menace fantôme");
             _films.Add("Star Wars II : L'attaque des clones");
@@ -111,23 +72,19 @@ namespace Voyage.Models
             _films.Add("Ghost In The Shell");
         }
 
-        #endregion
-
-        #region Public Methods
-
-        public void AjouterFilm(string film)
+        public void AjoutFilm(string film)
         {
             if (film == null || film.Trim().Length == 0)
                 throw new ArgumentNullException("L'argument ne peut pas être null");
             if (_filmsChoisis.Contains(film))
                 throw new Exception("L'élément existe déjà dans la liste");
-            if (_nbFilmsRestants == 0)
+            if (_nbFilmsRestant == 0)
                 throw new IndexOutOfRangeException($"La liste dépasse le nombre autorisé d'élements. Maximum : {_nbFilmsMax}");
             _filmsChoisis.Add(film);
-            _nbFilmsRestants--;
+            _nbFilmsRestant--;
         }
 
-        public void RetirerFilm(string film)
+        public void EnleverFilm(string film)
         {
             if (film == null || film.Trim().Length == 0)
                 throw new ArgumentNullException("L'argument ne peut pas être null");
@@ -136,10 +93,11 @@ namespace Voyage.Models
             if (_filmsChoisis.Count == 0)
                 throw new IndexOutOfRangeException($"La liste ne contient aucun élement");
             _filmsChoisis.Remove(film);
-            _nbFilmsRestants++;
+            _nbFilmsRestant++;
         }
 
-        public void AjouterEnfant(Enfant enfant)
+
+        public void AjoutEnfant(Enfant enfant)
         {
             if (enfant == null)
                 throw new NullReferenceException("L'objet passé ne peut pas être vide.");
@@ -148,7 +106,7 @@ namespace Voyage.Models
             _enfantsACharge.Add(enfant);
         }
 
-        public void RetirerEnfant (Enfant enfant)
+        public void EnleverEnfant(Enfant enfant)
         {
             if (enfant == null)
                 throw new NullReferenceException("L'objet passé ne peut pas être vide.");
@@ -158,5 +116,6 @@ namespace Voyage.Models
         }
 
         #endregion
+
     }
 }

@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Voyage.Models
 {
     public abstract class Personne
     {
+
         #region Fields
 
         private string _nom;
         private string _prenom;
         private DateTime _dateNaissance;
+        private string _groupe;
 
         #endregion
 
@@ -17,16 +25,17 @@ namespace Voyage.Models
 
         public Personne()
         {
-            _nom = null;
-            _prenom = null;
-            _dateNaissance = DateTime.MinValue;
+            this._nom = null;
+            this._prenom = null;
+            this._dateNaissance = DateTime.MinValue;
         }
 
-        public Personne(string nom, string prenom, DateTime datenaiss)
+        public Personne(string nom, string prenom, DateTime dateNaissance, string groupe)
         {
-            Nom = nom;
-            Prenom = prenom;
-            DateNaissance = datenaiss;
+            this.Nom = nom;
+            this.Prenom = Prenom;
+            this.Groupe = groupe;
+            this.DateNaissance = dateNaissance;
         }
 
         #endregion
@@ -38,17 +47,9 @@ namespace Voyage.Models
             get { return _nom; }
             set
             {
-                try
-                {
-                    if (value.Trim().Length > 0)
-                        _nom = value;
-                    else
-                        throw new Exception("Le nom ne peut pas être vide.");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+                if (value == null || value.Trim().Length == 0)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                _nom = value;
             }
         }
 
@@ -57,17 +58,9 @@ namespace Voyage.Models
             get { return _prenom; }
             set
             {
-                try
-                {
-                    if (value.Trim().Length > 0)
-                        _prenom = value;
-                    else
-                        throw new Exception("Le prénom ne peut être vide.");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+                if (value == null || value.Trim().Length == 0)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                _prenom = value;
             }
         }
 
@@ -76,48 +69,73 @@ namespace Voyage.Models
             get { return _dateNaissance; }
             set
             {
-                try
-                {
-                    if (DateTime.Compare(value, DateTime.Now) < 0)
-                        _dateNaissance = value;
-                    else
-                        throw new Exception("La personne doit être née pour pouvoir particier à un voyage.");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+                if (value == null)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                if (DateTime.Compare(value, DateTime.Now) >= 0)
+                    throw new Exception("La personne doit être née pour pouvoir participer à un voyage");
+                _dateNaissance = value;
             }
+        }
+
+        public string Groupe
+        {
+            get { return _groupe; }
+            set
+            {
+                if (value == null || value.Trim().Length == 0)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                _groupe = value;
+            }
+        }
+
+        public int Age
+        {
+            get { return new DateTime((DateTime.Now - _dateNaissance).Ticks).Year; }
         }
 
         #endregion
 
         #region Overrides
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                throw new NullReferenceException("L'objet passé ne peut pas être vide");
+            if (GetType() != obj.GetType())
+                throw new InvalidCastException($"L'objet passé n'est pas un objet de type {GetType()}");
+            Personne p = (Personne)obj;
+            return p.Nom.Equals(this.Nom) && p.Prenom.Equals(this.Prenom) && DateTime.Compare(p.DateNaissance, this.DateNaissance) == 0;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
 
         public override string ToString()
         {
-            string s = null;
-            s += $"Nom : {Nom}\n";
-            s += $"Prénom : {Prenom}\n";
-            s += $"Date de naissance : {DateNaissance}";
+            string s = "";
+            s += $"Nom : {_nom}\n";
+            s += $"Prénom : {_prenom}\n";
+            s += $"Date de naissance : {_dateNaissance} ==> Age : {Age}";
             return s;
         }
 
-        public override bool Equals(object obj)
+        public static bool operator ==(Personne p1, Personne p2)
         {
-            Personne p = (Personne)obj;
-            if (this._nom.Equals(p.Nom) &&
-                this._prenom.Equals(p.Prenom) &&
-                DateTime.Compare(this._dateNaissance, p.DateNaissance) == 0)
-            {
-                p = null;
-                return true;
-            }
-            else
-            {
-                p = null;
-                return false;
-            }
+            if ((object)p1 == null)
+                throw new NullReferenceException("L'objet passé pour l'argument p1 ne peut pas être vide");
+            if ((object)p2 == null)
+                throw new NullReferenceException("L'objet passé pour l'argument p2 ne peut pas être vide");
+            return p1.Equals(p2);
+        }
+
+        public static bool operator !=(Personne p1, Personne p2)
+        {
+            if ((object)p1 == null)
+                throw new NullReferenceException("L'objet passé pour l'argument p1 ne peut pas être vide");
+            if ((object)p2 == null)
+                throw new NullReferenceException("L'objet passé pour l'argument p2 ne peut pas être vide");
+            return !p1.Equals(p2);
         }
 
         #endregion
