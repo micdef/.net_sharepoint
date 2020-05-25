@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CG_Console.cs" />
+    <Compile Include="A_Console.cs" />
+    <Compile Include="C_Affichage.cs" />
     <Compile Include="C_ConsoleApplication.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

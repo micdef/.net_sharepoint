@@ -18,6 +18,7 @@ namespace Voyage.Models
         private string _prenom;
         private DateTime _dateNaissance;
         private string _groupe;
+        private readonly int _ageAdulte;
 
         #endregion
 
@@ -28,14 +29,16 @@ namespace Voyage.Models
             this._nom = null;
             this._prenom = null;
             this._dateNaissance = DateTime.MinValue;
+            this._ageAdulte = 21;
         }
 
-        public Personne(string nom, string prenom, DateTime dateNaissance, string groupe)
+        public Personne(string nom, string prenom, DateTime dateNaissance, string groupe, int ageAdulte = 18)
         {
             this.Nom = nom;
-            this.Prenom = Prenom;
+            this.Prenom = prenom;
             this.Groupe = groupe;
             this.DateNaissance = dateNaissance;
+            this._ageAdulte = ageAdulte;
         }
 
         #endregion
@@ -64,13 +67,13 @@ namespace Voyage.Models
             }
         }
 
-        public DateTime DateNaissance
+        public virtual DateTime DateNaissance
         {
             get { return _dateNaissance; }
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                    throw new ArgumentNullException("L'argument passé ne peut pas être videL'argument passé ne peut pas être vide");
                 if (DateTime.Compare(value, DateTime.Now) >= 0)
                     throw new Exception("La personne doit être née pour pouvoir participer à un voyage");
                 _dateNaissance = value;
@@ -91,6 +94,11 @@ namespace Voyage.Models
         public int Age
         {
             get { return new DateTime((DateTime.Now - _dateNaissance).Ticks).Year; }
+        }
+
+        public int AgeAdulte
+        {
+            get { return this._ageAdulte; }
         }
 
         #endregion

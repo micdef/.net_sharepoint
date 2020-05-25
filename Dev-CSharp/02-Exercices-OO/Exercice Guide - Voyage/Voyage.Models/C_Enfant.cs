@@ -28,7 +28,7 @@ namespace Voyage.Models
             this._responsable = null;
         }
 
-        private Enfant(string nom, string prenom, DateTime dateNaissance, string groupe, Adulte responsable) : base (nom, prenom, dateNaissance, groupe)
+        private Enfant(string nom, string prenom, DateTime dateNaissance, string groupe, Adulte responsable, int ageAdulte) : base (nom, prenom, dateNaissance, groupe, ageAdulte)
         {
             this._carnets = new List<string>();
             this._carnetChoisi = null;
@@ -58,7 +58,7 @@ namespace Voyage.Models
             }
         }
 
-        internal Adulte Responsable
+        public Adulte Responsable
         {
             get { return _responsable; }
             set
@@ -66,6 +66,20 @@ namespace Voyage.Models
                 if (value == null)
                     throw new NullReferenceException("L'objet passé ne peut pas être vide");
                 _responsable = value;
+            }
+        }
+
+        public override DateTime DateNaissance
+        {
+            get { return base.DateNaissance; }
+            set
+            {
+                if (value == null)
+                    throw new ArgumentNullException("new DateTime((DateTime.Now - _dateNaissance).Ticks).Year");
+                if (new DateTime((DateTime.Now - value).Ticks).Year >= base.AgeAdulte)
+                    throw new Exception("La date de naissance indique que vous avez entré une personne qui n'est pas un enfant");
+                base.DateNaissance = value;
+
             }
         }
 

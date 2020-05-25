@@ -9,7 +9,7 @@ using Voyage.Models;
 
 namespace Voyage.App
 {
-    class ConsoleApplication : A_Console
+    public sealed class ConsoleApplication : A_Console
     {
 
         #region Constants
@@ -31,7 +31,7 @@ namespace Voyage.App
         private const char BORDER_VERTICAL = '║';
 
         // Application Borders Position
-        private const int BORDER_TITLE_Y = 3;
+        private const int BORDER_TITLE_Y = SCREEN_YSTART + 2;
         private const int BORDER_MAIN_Y = SCREEN_YSTOP - 5;
         private const int BORDER_ENCOD_Y = SCREEN_YSTOP - 3;
 
@@ -271,6 +271,11 @@ namespace Voyage.App
         {
             ViderZonePrincipale();
             base.WriteLine(USAGE_XSTART, USAGE_XSTOP, MAIN_YSTART, MAIN_YSTOP, message);
+        }
+
+        public void AfficherMessageZP(string message, int ligne)
+        {
+            base.WriteLine(USAGE_XSTART, USAGE_XSTOP, MAIN_YSTART + ligne, MAIN_YSTART + ligne, message);
         }
 
         #endregion

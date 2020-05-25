@@ -33,7 +33,7 @@ namespace Voyage.Models
             this._enfantsACharge = null;
         }
 
-        public Adulte(string nom, string prenom, DateTime dateNaissance, string groupe, int nbFilmsMax) : base(nom, prenom, dateNaissance, groupe)
+        public Adulte(string nom, string prenom, DateTime dateNaissance, string groupe, int nbFilmsMax, int ageAdulte) : base(nom, prenom, dateNaissance, groupe, ageAdulte)
         {
             this._films = new List<string>();
             this._filmsChoisis = new List<string>();
@@ -74,6 +74,20 @@ namespace Voyage.Models
         {
             get { return _enfantsACharge.AsReadOnly(); }
             private set {}
+        }
+
+        public override DateTime DateNaissance
+        {
+            get { return base.DateNaissance; }
+            set 
+            {
+                if (value == null)
+                    throw new ArgumentNullException("new DateTime((DateTime.Now - _dateNaissance).Ticks).Year");
+                if (new DateTime((DateTime.Now - value).Ticks).Year < base.AgeAdulte)
+                    throw new Exception("La date de naissance indique que vous avez entré une personne qui n'est pas un adulte");
+                base.DateNaissance = value;
+
+            }
         }
 
         #endregion

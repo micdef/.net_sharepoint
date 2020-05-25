@@ -14,6 +14,8 @@ namespace Voyage.Models
 
         #region Fields
 
+        private string _nom;
+        private string _destination;
         private double _prixAdulte;
         private double _prixEnfant;
         private int _nombreMaxFilms;
@@ -29,6 +31,8 @@ namespace Voyage.Models
 
         private Voyages()
         {
+            this._nom = null;
+            this._destination = null;
             this._prixAdulte = 0.0;
             this._prixEnfant = 0.0;
             this._nombreMaxFilms = 0;
@@ -39,8 +43,10 @@ namespace Voyage.Models
             this._organisateur = null;
         }
 
-        public Voyages(double prixAdulte, double prixEnfant, int nombreMaxFilms, double pctReducOrganisateur, Adulte organisateur)
+        public Voyages(string nom, string destination, double prixAdulte, double prixEnfant, int nombreMaxFilms, double pctReducOrganisateur, Adulte organisateur)
         {
+            this.Nom = nom;
+            this.Destination = destination;
             this.PrixAdulte = prixAdulte;
             this.PrixEnfant = prixEnfant;
             this.NombreMaxFilms = nombreMaxFilms;
@@ -54,6 +60,28 @@ namespace Voyage.Models
         #endregion
 
         #region Getters-Setters
+
+        public string Nom
+        { 
+            get { return _nom; }
+            set
+            {
+                if (value == null || value.Trim().Length == 0)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                _nom = value;
+            }
+        }
+
+        public string Destination
+        {
+            get { return _destination; }
+            set
+            {
+                if (value == null || value.Trim().Length == 0)
+                    throw new ArgumentNullException("L'argument passé ne peut pas être vide");
+                _destination = value;
+            }
+        }
 
         public double PrixAdulte
         {

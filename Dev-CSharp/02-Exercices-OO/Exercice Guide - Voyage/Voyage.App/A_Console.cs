@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Voyage.Models
+namespace Voyage.App
 {
     public abstract class A_Console
     {
@@ -39,7 +39,7 @@ namespace Voyage.Models
             this._lineEnd = 24;
             this._defaultTextColor = ConsoleColor.Gray;
             this._defaultBackgroundColor = ConsoleColor.Black;
-            Console.SetWindowSize(this._columnEnd, this._lineEnd);
+            Console.SetWindowSize(this._columnEnd + 1, this._lineEnd);
             this.BackgroundColor = this._defaultBackgroundColor;
             this.TextColor = this._defaultTextColor;
         }
@@ -52,7 +52,7 @@ namespace Voyage.Models
             this.LineEnd = lineEnd;
             this._defaultTextColor = ConsoleColor.Gray;
             this._defaultBackgroundColor = ConsoleColor.Black;
-            Console.SetWindowSize(this.ColumnEnd, this.LineEnd);
+            Console.SetWindowSize(this.ColumnEnd + 1, this.LineEnd);
             this.BackgroundColor = this._defaultBackgroundColor;
             this.TextColor = this._defaultTextColor;
         }
@@ -171,21 +171,39 @@ namespace Voyage.Models
         
         public void SetCursorXY(int x, int y)
         {
+            if (x < _columnStart || x > _columnEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_columnStart} et n°{_columnEnd} incluses");
+            if (y < _lineStart || y > _lineEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_lineStart} et n°{_lineEnd} incluses");
             Console.SetCursorPosition(x, y);
         }
 
         public void ClearLine(int y, int xStart, int xStop)
         {
+            if (xStart < _columnStart || xStart > _columnEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_columnStart} et n°{_columnEnd} incluses");
+            if (xStop < _columnStart || xStop > _columnEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_columnStart} et n°{_columnEnd} incluses");
+            if (y < _lineStart || y > _lineEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_lineStart} et n°{_lineEnd} incluses");
             for (int x = xStart; x <= xStop; x++)
                 ShowCarInPos(x, y, ' ');
         }
 
         public void WriteLine(int xStart, int xStop, int yStart, int yStop, string m)
         {
-            for (int y = yStart; y <= yStop; y++)
-                ClearLine(y, xStart, xStop);
+            if (xStart < _columnStart || xStart > _columnEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_columnStart} et n°{_columnEnd} incluses");
+            if (xStop < _columnStart || xStop > _columnEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_columnStart} et n°{_columnEnd} incluses");
+            if (yStart < _lineStart || yStart > _lineEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_lineStart} et n°{_lineEnd} incluses");
+            if (yStop < _lineStart || yStop > _lineEnd)
+                throw new IndexOutOfRangeException($"Le curseur ne peut être déplacé qu'entre les colonnes n°{_lineStart} et n°{_lineEnd} incluses");
             if (m.Length > (xStop - xStart + 1) * (yStop - yStart + 1))
                 throw new Exception($"Message trop long pour la zonne que vous avez sélectionné. Le message fait {m.Length} caractères et la zone fait {(xStop - xStart + 1) * (yStop - yStart + 1)} caractère");
+            for (int y = yStart; y <= yStop; y++)
+                ClearLine(y, xStart, xStop);
             for (int y = yStart, i = 0; y <= yStop && i < m.Length; y++)
                 for (int x = xStart; x <= xStop && i < m.Length; x++)
                     ShowCarInPos(x, y, m.Substring(i++, 1).ToCharArray()[0]);
